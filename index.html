@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12: Sound - Class 9 Physical Science (SCERT Telangana)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;600;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans Telugu', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 leading-relaxed">
+
+    <!-- VISITOR TRACKING MODAL -->
+    <div id="visitorModal" class="fixed inset-0 bg-slate-900/80 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 text-center">
+            <h2 class="text-2xl font-bold text-blue-600 mb-2">Sound Study Portal</h2>
+            <p class="text-sm text-slate-600 mb-6">Please enter your Name and Roll Number to begin tracking your study session and timer automatically.</p>
+            <form id="visitorForm" class="space-y-4 text-left">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Full Name / పేరు</label>
+                    <input type="text" id="visitorName" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Roll Number / రోల్ నంబర్</label>
+                    <input type="text" id="visitorRoll" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition">Start Learning / అభ్యాసం ప్రారంభించండి</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FLOATING TIMER & REPORT BAR -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-4 sticky top-0 z-40 flex justify-between items-center shadow-md">
+        <div class="flex items-center space-x-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span id="sessionTimer">Time Spent: 00:00</span>
+        </div>
+        <button onclick="sendReport()" class="bg-emerald-600 hover:bg-emerald-500 px-3 py-1 rounded text-white font-medium transition">Send Report to Teacher</button>
+    </div>
+
+    <!-- HEADER -->
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-12 px-6 text-center shadow-lg">
+        <h1 class="text-3xl md:text-5xl font-bold mb-2">Chapter 12: Sound</h1>
+        <p class="text-blue-200 text-sm md:text-base">Class 9 Physical Science | SCERT Telangana Syllabus (Pages 210 - 230)</p>
+    </header>
+
+    <!-- UPPER INDEX (QUICK NAVIGATION) -->
+    <nav class="bg-white border-b sticky top-9 z-30 shadow-sm overflow-x-auto whitespace-nowrap px-6 py-3 flex space-x-6 text-sm font-medium text-blue-600">
+        <a href="#intro" class="hover:underline">Introduction & Propagation (210-214)</a>
+        <a href="#characteristics" class="hover:underline">Characteristics of Sound Wave (214-220)</a>
+        <a href="#reflection" class="hover:underline">Reflection, Echo & Hearing Range (220-226)</a>
+        <a href="#keypoints" class="hover:underline">40 Key Points</a>
+        <a href="#glossary" class="hover:underline">Glossary (40 Terms)</a>
+        <a href="#exercises" class="hover:underline">Exercises & Q&A</a>
+        <a href="#exp-projects" class="hover:underline">Experiments & Projects</a>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- SECTION 1: INTRODUCTION & PROPAGATION -->
+        <section id="intro" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-100">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-1 rounded">Pages 210 - 214</span>
+            <h2 class="text-2xl font-bold text-slate-800 mt-3 mb-4">Introduction, Production and Propagation of Sound</h2>
+            <div class="space-y-4 text-slate-700">
+                <p><strong>English:</strong> Sound is a form of mechanical energy produced by vibrating bodies. It travels through a medium in the form of longitudinal waves consisting of compressions (regions of high density and pressure) and rarefactions (regions of low density and pressure).</p>
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded text-slate-800">
+                    <p class="font-semibold text-amber-900">తెలుగు వివరణ (Telugu Description):</p>
+                    <p class="text-sm mt-1">ధ్వని అనేది కంపిస్తున్న వస్తువుల ద్వారా ఉత్పత్తి అయ్యే ఒక యాంత్రిక శక్తి రూపం. ఇది యానకం గుండా అనుదైర్ఘ్య తరంగాలుగా (longitudinal waves) ప్రయాణిస్తుంది. ఇందులో అధిక సాంద్రత గల సంపీడనాలు (compressions) మరియు అల్ప సాంద్రత గల విరళనాలు (rarefactions) ఏర్పడతాయి.</p>
+                    <p class="text-xs text-amber-700 mt-2"><strong>Example / ఉదాహరణ:</strong> A vibrating tuning fork produces sound waves that travel through air to reach our ears. (కంపించే ట్యూనింగ్ ఫోర్క్ గాలిలో ప్రయాణించే ధ్వని తరంగాలను ఉత్పత్తి చేస్తుంది.)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CHARACTERISTICS OF SOUND WAVE -->
+        <section id="characteristics" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-100">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-1 rounded">Pages 214 - 220</span>
+            <h2 class="text-2xl font-bold text-slate-800 mt-3 mb-4">Characteristics of Sound Waves and Musical Sound</h2>
+            <div class="space-y-4 text-slate-700">
+                <p><strong>English:</strong> Sound waves are characterized by wavelength (lambda), amplitude (A), frequency (nu), and wave speed (v), related by the equation v = nu * lambda. Musical sounds have three main characteristics: pitch (depending on frequency), loudness (depending on amplitude), and quality (depending on waveform).</p>
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded text-slate-800">
+                    <p class="font-semibold text-amber-900">తెలుగు వివరణ (Telugu Description):</p>
+                    <p class="text-sm mt-1">తరంగదైర్ఘ్యం (wavelength), కంపన పరిమితి (amplitude), పౌనఃపున్యం (frequency) మరియు తరంగ వేగం (speed) అనేవి ధ్వని తరంగ లక్షణాలు. v = nu * lambda అనే సూత్రం వీటిని కలుపుతుంది. సంగీత ధ్వనులకు పిచ్ (శృతి), బిగ్గరత (loudness) మరియు నాణ్యత (quality) అనే మూడు ముఖ్యమైన లక్షణాలు ఉంటాయి.</p>
+                    <p class="text-xs text-amber-700 mt-2"><strong>Example / ఉదాహరణ:</strong> A mosquito has a shrill voice due to high frequency, while a lion's roar has low frequency. (దోమ అరుపు అధిక పౌనఃపున్యం వల్ల పదునుగా ఉంటుంది, సింహం గర్జన అల్ప పౌనఃపున్యం కలిగి ఉంటుంది.)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: REFLECTION, ECHO & HEARING RANGE -->
+        <section id="reflection" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-100">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-1 rounded">Pages 220 - 226</span>
+            <h2 class="text-2xl font-bold text-slate-800 mt-3 mb-4">Reflection of Sound, Echo, Infrasonic, Ultrasound and SONAR</h2>
+            <div class="space-y-4 text-slate-700">
+                <p><strong>English:</strong> Sound follows the laws of reflection. An echo is heard if reflected sound reaches the ear after at least 0.1s. The audible frequency range for humans is 20 Hz to 20,000 Hz. Sounds below 20 Hz are infrasonic and above 20 kHz are ultrasonic, which are widely used in medical imaging and SONAR.</p>
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded text-slate-800">
+                    <p class="font-semibold text-amber-900">తెలుగు వివరణ (Telugu Description):</p>
+                    <p class="text-sm mt-1">ధ్వని పరావర్తన నియమాలను పాటిస్తుంది. అసలు ధ్వనికి ప్రతిధ్వనికి మధ్య కాల వ్యవధి 0.1 సెకన్ల కంటే ఎక్కువ ఉంటే ప్రతిధ్వని (echo) వినిపిస్తుంది. మానవుని శ్రవణావధి 20 Hz నుండి 20,000 Hz వరకు ఉంటుంది. 20 Hz కంటే తక్కువ ఉన్నవి అవశ్రవ్యాలు, 20 kHz కంటే ఎక్కువ ఉన్నవి అతీధ్వనులు (ultrasounds), వీటిని వైద్య రంగంలో మరియు SONAR లో ఉపయోగిస్తారు.</p>
+                    <p class="text-xs text-amber-700 mt-2"><strong>Example / ఉదాహరణ:</strong> Ships use SONAR systems to measure the depth of the sea using ultrasonic waves. (ఓడలు అతీధ్వని తరంగాలను ఉపయోగించి సముద్రపు లోతును కొలవడానికి SONAR వ్యవస్థను వాడతాయి.)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 40 KEY POINTS -->
+        <section id="keypoints" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-100">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">40 Key Points (40 ముఖ్యాంశాలు)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-700">
+                <div class="bg-slate-50 p-3 rounded border">1. Sound is a form of mechanical energy produced by vibrations. (ధ్వని అనేది కంపనాల వల్ల ఏర్పడే యాంత్రిక శక్తి రూపం.)</div>
+                <div class="bg-slate-50 p-3 rounded border">2. A tuning fork is an acoustic resonator used to produce constant pitch. (ట్యూనింగ్ ఫోర్క్ అనేది స్థిరమైన శృతినిచ్చే శబ్ద అనునాదకం.)</div>
+                <div class="bg-slate-50 p-3 rounded border">3. Sound travels through a medium as longitudinal waves. (ధ్వని యానకం గుండా అనుదైర్ఘ్య తరంగాలుగా ప్రయాణిస్తుంది.)</div>
+                <div class="bg-slate-50 p-3 rounded border">4. Compressions are regions of high density and pressure. (సంపీడనాలు అధిక సాంద్రత, పీడనం గల ప్రాంతాలు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">5. Rarefactions are regions of low density and pressure. (విరళనాలు అల్ప సాంద్రత, పీడనం గల ప్రాంతాలు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">6. Wavelength is the distance between two consecutive compressions or rarefactions. (రెండు వరుస సంపీడనాల మధ్య దూరం తరంగదైర్ఘ్యం.)</div>
+                <div class="bg-slate-50 p-3 rounded border">7. SI unit of wavelength is metre (m). (తరంగదైర్ఘ్యం SI ప్రమాణం మీటర్.)</div>
+                <div class="bg-slate-50 p-3 rounded border">8. Amplitude is the maximum disturbance of particles from mean position. (కంపన పరిమితి అనగా గరిష్ట కణ విచలనం.)</div>
+                <div class="bg-slate-50 p-3 rounded border">9. Time period is the time taken to complete one oscillation. (ఆవర్తన కాలం అనగా ఒక డోలనం పూర్తి కావడానికి పట్టే సమయం.)</div>
+                <div class="bg-slate-50 p-3 rounded border">10. Frequency is the number of oscillations per unit time. (పౌనఃపున్యం అనగా ప్రమాణ కాలంలో జరిగే డోలనాల సంఖ్య.)</div>
+                <div class="bg-slate-50 p-3 rounded border">11. Frequency and time period are related as T = 1 / nu. (పౌనఃపున్యానికి, ఆవర్తన కాలానికి మధ్య సంబంధం T = 1 / nu.)</div>
+                <div class="bg-slate-50 p-3 rounded border">12. SI unit of frequency is Hertz (Hz). (పౌనఃపున్యం SI ప్రమాణం హెర్ట్జ్.)</div>
+                <div class="bg-slate-50 p-3 rounded border">13. Wave speed relation is given by v = nu * lambda. (తరంగ వేగానికి సూత్రం v = nu * lambda.)</div>
+                <div class="bg-slate-50 p-3 rounded border">14. Speed of sound is faster in solids than liquids and gases. (ఘన పదార్థాలలో ధ్వని వేగం గాలి కంటే ఎక్కువ.)</div>
+                <div class="bg-slate-50 p-3 rounded border">15. Speed of sound in dry air at 20°C is 343.2 m/s. (20°C వద్ద గాలిలో ధ్వని వేగం 343.2 మీ/సె.)</div>
+                <div class="bg-slate-50 p-3 rounded border">16. Supersonic speed refers to speeds greater than the speed of sound. (ధ్వని వేగం కంటే ఎక్కువ వేగాన్ని సూపర్‌సోనిక్ అంటారు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">17. Sonic boom is a loud sound produced by supersonic aircraft. (సూపర్‌సోనిక్ విమానాలు చేసే పెద్ద శబ్దాన్ని సోనిక్ బూమ్ అంటారు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">18. Pitch of sound depends directly on frequency. (ధ్వని పిచ్ పౌనఃపున్యంపై ఆధారపడి ఉంటుంది.)</div>
+                <div class="bg-slate-50 p-3 rounded border">19. Loudness of sound depends on its amplitude. (ధ్వని బిగ్గరత దాని కంపన పరిమితిపై ఆధారపడుతుంది.)</div>
+                <div class="bg-slate-50 p-3 rounded border">20. Loudness is measured in decibels (dB). (బిగ్గరతను డెసిబెల్స్‌లో కొలుస్తారు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">21. Normal conversational loudness is around 50 to 60 dB. (సాధారణ సంభాషణ బిగ్గరత 50-60 dB ఉంటుంది.)</div>
+                <div class="bg-slate-50 p-3 rounded border">22. Sounds above 80 dB are painful and harmful to ears. (80 dB కంటే ఎక్కువ శబ్దం చెవులకు హానికరం.)</div>
+                <div class="bg-slate-50 p-3 rounded border">23. Quality of sound enables us to distinguish different instruments. (నాణ్యత ద్వారా వివిధ వాయిద్యాల శబ్దాలను వేరు చేయవచ్చు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">24. Reflection of sound obeys the same laws as reflection of light. (ధ్వని పరావర్తనం కాంతి పరావర్తన నియమాలను పాటిస్తుంది.)</div>
+                <div class="bg-slate-50 p-3 rounded border">25. Persistence of human ear sound sensation is 0.1s. (మానవ చెవిలో శబ్ద అనుభూతి 0.1 సెకన్లు నిలుస్తుంది.)</div>
+                <div class="bg-slate-50 p-3 rounded border">26. An echo is a reflected sound heard after 0.1s. (0.1 సెకన్ల తర్వాత వినిపించే పరావర్తన ధ్వని ప్రతిధ్వని.)</div>
+                <div class="bg-slate-50 p-3 rounded border">27. Minimum distance for an echo is approximately 17.2m. (ప్రతిధ్వనికి కనీస దూరం సుమారు 17.2 మీటర్లు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">28. Reverberation is prolonged sound due to multiple reflections under 0.1s. (0.1 సెకన్ల కంటే తక్కువలో వచ్చే పరావర్తనాలు అనుగుణంగా ప్రతిధ్వనించడాన్ని రెవెర్బరేషన్ అంటారు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">29. Auditoriums use sound-absorbent materials to reduce reverberation. (సభాభవనాలలో శబ్ద శోషణ పదార్థాలను వాడతారు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">30. Megaphones and horns use multiple reflections to guide sound forward. (మెగాఫోన్‌లు బహుళ పరావర్తనాన్ని వాడతాయి.)</div>
+                <div class="bg-slate-50 p-3 rounded border">31. Stethoscopes work on multiple reflections of heart sounds. (స్టెతస్కోప్ బహుళ పరావర్తన సూత్రంపై పనిచేస్తుంది.)</div>
+                <div class="bg-slate-50 p-3 rounded border">32. Audible frequency range for humans is 20 Hz to 20,000 Hz. (మానవుల శ్రవణావధి 20 Hz నుండి 20,000 Hz.)</div>
+                <div class="bg-slate-50 p-3 rounded border">33. Infrasonic sound has a frequency below 20 Hz. (20 Hz కంటే తక్కువ ఉన్నవి అవశ్రవ్యాలు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">34. Ultrasonic sound has a frequency above 20,000 Hz. (20,000 Hz కంటే ఎక్కువ ఉన్నవి అతీధ్వనులు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">35. Bats use ultrasonic waves for navigation and hunting. (గబ్బిలాలు అతీధ్వనులను ఉపయోగిస్తాయి.)</div>
+                <div class="bg-slate-50 p-3 rounded border">36. Ultrasound is used in cleaning and defect detection in metals. (అతీధ్వనులను లోహ లోపాలను కనుగొనడానికి వాడతారు.)</div>
+                <div class="bg-slate-50 p-3 rounded border">37. Echocardiography uses ultrasound for heart imaging. (ఎకోకార్ಡಿಯోగ్రఫీ గుండె చిత్రాల కోసం అతీధ్వనులను వాడతుంది.)</div>
+                <div class="bg-slate-50 p-3 rounded border">38. Ultrasonography is safer than X-rays for monitoring foetus growth. (అల్ట్రాసోనోగ్రఫీ ఎక్స్-రే కంటే సురక్షితమైనది.)</div>
+                <div class="bg-slate-50 p-3 rounded border">39. SONAR stands for Sound Navigation And Ranging. (SONAR పూర్తి రూపం సౌండ్ నేవిగేషన్ అండ్ రేంజింగ్.)</div>
+                <div class="bg-slate-50 p-3 rounded border">40. SONAR uses ultrasonic waves to measure sea depths and locate objects. (SONAR సముద్ర లోతును కొలవడానికి అతీధ్వనులను వాడతుంది.)</div>
+            </div>
+        </section>
+
+        <!-- 40 GLOSSARY TERMS -->
+        <section id="glossary" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-100">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Glossary Vocabulary (40 పదకోశ పదాలు)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="p-3 bg-slate-50 rounded border"><strong>1. Sound (ధ్వని):</strong> Mechanical wave producing sensation of hearing.<br><em>Ex: We hear sound through ears. (మనం చెవుల ద్వారా ధ్వనిని వింటాం.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>2. Vibration (కంపనము):</strong> Rapid to and fro motion.<br><em>Ex: Vibrations produce sound. (కంపనాలు ధ్వనిని ఉత్పత్తి చేస్తాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>3. Medium (యానకము):</strong> Substance through which sound travels.<br><em>Ex: Air is a medium for sound. (గాలి ధ్వనికి యానకం.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>4. Compression (సంపీడనము):</strong> Region of high density and pressure.<br><em>Ex: Compressions form in sound waves. (ధ్వని తరంగాలలో సంపీడనాలు ఏర్పడతాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>5. Rarefaction (విరళనము):</strong> Region of low density and pressure.<br><em>Ex: Rarefactions follow compressions. (సంపీడనాల వెనుక విరళనాలు ఉంటాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>6. Longitudinal Wave (అనుదైర్ఘ్య తరంగము):</strong> Wave where particles vibrate parallel to propagation.<br><em>Ex: Sound waves are longitudinal. (ధ్వని తరంగాలు అనుదైర్ఘ్య తరంగాలు.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>7. Transverse Wave (తిర్యక్ తరంగము):</strong> Wave where particles vibrate perpendicular to propagation.<br><em>Ex: Light waves are transverse. (కాంతి తరంగాలు తిర్యక్ తరంగాలు.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>8. Wavelength (తరంగదైర్ఘ్యము):</strong> Distance between consecutive compressions.<br><em>Ex: Wavelength is denoted by lambda. (తరంగదైర్ఘ్యాన్ని లామ్డాతో సూచిస్తారు.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>9. Amplitude (కంపన పరిమితి):</strong> Maximum particle displacement.<br><em>Ex: Amplitude determines loudness. (కంపన పరిమితి బిగ్గరతను నిర్ణయిస్తుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>10. Frequency (పౌనఃపుల్యము):</strong> Number of oscillations per second.<br><em>Ex: Frequency is measured in Hertz. (పౌనఃపున్యాన్ని హెర్ట్జ్‌లో కొలుస్తారు.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>11. Time Period (ఆవర్తన కాలము):</strong> Time taken for one complete oscillation.<br><em>Ex: Time period is inverse of frequency. (ఆవర్తన కాలం పౌనఃపున్యానికి విలోమంగా ఉంటుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>12. Wave Speed (తరంగ వేగము):</strong> Distance travelled by wave per unit time.<br><em>Ex: Wave speed equals product of frequency and wavelength. (తరంగ వేగం పౌనఃపున్యం, తరంగదైర్ఘ్యాల లబ్ధం.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>13. Pitch (శృతి):</strong> Characteristic distinguishing shrillness.<br><em>Ex: Women have higher pitch than men. (మహిళల శృతి పురుషుల కంటే ఎక్కువ.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>14. Loudness (బిగ్గరత):</strong> Degree of sound sensation.<br><em>Ex: Shouting produces a loud sound. (అరవడం వల్ల పెద్ద శబ్దం వస్తుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>15. Quality / Timbre (నాణ్యత):</strong> Characteristic distinguishing sound notes.<br><em>Ex: Quality distinguishes musical instruments. (నాణ్యత ద్వారా వివిధ వాయిద్యాలను గుర్తించవచ్చు.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>16. Echo (ప్రతిధ్వని):</strong> Reflected sound heard after 0.1s.<br><em>Ex: Mountains produce clear echoes. (కొండలు స్పష్టమైన ప్రతిధ్వనులను ఇస్తాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>17. Reverberation (అనుధ్వని / ప్రతిధ్వననం):</strong> Prolonged sound due to multiple reflections.<br><em>Ex: Empty halls show reverberation. (ఖాళీ హాల్‌లలో అనుధ్వని ఉంటుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>18. Audible Range (శ్రవణావధి):</strong> Frequency range humans can hear.<br><em>Ex: Audible range is 20Hz to 20kHz. (శ్రవణావధి 20Hz నుండి 20kHz.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>19. Infrasonic Sound (అవశ్రవ్యము):</strong> Sound below 20 Hz.<br><em>Ex: Whales produce infrasonic sounds. (తిమింగలాలు అవశ్రవ్యాలను ఉత్పత్తి చేస్తాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>20. Ultrasonic Sound (అతీధ్వని):</strong> Sound above 20,000 Hz.<br><em>Ex: Bats use ultrasonic sounds. (గబ్బిలాలు అతీధ్వనులను వాడతాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>21. SONAR:</strong> Sound Navigation And Ranging system.<br><em>Ex: SONAR detects objects underwater. (SONAR నీటి అடியில் వస్తువులను గుర్తిస్తుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>22. Tuning Fork (ట్యూనింగ్ ఫోర్క్):</strong> U-shaped steel bar producing standard pitch.<br><em>Ex: A tuning fork vibrates at fixed frequency. (ట్యూనింగ్ ఫోర్క్ స్థిర పౌనఃపున్యంతో కంపిస్తుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>23. Decibel (డెసిబెల్):</strong> Unit of sound loudness.<br><em>Ex: Loudness is measured in decibels. (బిగ్గరతను డెసిబెల్స్‌లో కొలుస్తారు.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>24. Sonic Boom (సోనిక్ బూమ్):</strong> Shock waves from supersonic objects.<br><em>Ex: Jet planes cause sonic booms. (జెట్ విమానాలు సోనిక్ బూమ్‌లను సృష్టిస్తాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>25. Persistence of Sound (శబ్ద నిలకడ):</strong> Brain retention of sound for 0.1s.<br><em>Ex: Persistence of sound lasts 0.1 seconds. (శబ్ద నిలకడ 0.1 సెకన్లు ఉంటుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>26. Stethoscope (స్టెతస్కోప్):</strong> Medical device using sound reflection.<br><em>Ex: Doctors use stethoscopes for heartbeat. (డాక్టర్లు గుండె కొట్టుకోవడాన్ని వినడానికి స్టెతస్కోప్ వాడతారు.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>27. Megaphone (మెగాఫోన్):</strong> Cone-shaped horn directing sound.<br><em>Ex: Megaphones amplify voice directionally. (మెగాఫోన్‌లు శబ్దాన్ని ఒక వైపునకు ప్రసరింపజేస్తాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>28. Echocardiography:</strong> Ultrasound imaging of heart.<br><em>Ex: Echocardiography scans heart valves. (ఎకోకార్ಡಿಯోగ్రఫీ గుండె కవాటాలను పరిశీలిస్తుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>29. Ultrasonography:</strong> Medical imaging using ultrasound.<br><em>Ex: Ultrasonography scans internal organs. (అల్ట్రాసోనోగ్రఫీ అంతర్గత అవయవాలను స్కానింగ్ చేస్తుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>30. Slinky (స్లింకీ):</strong> Spring toy demonstrating wave motion.<br><em>Ex: A slinky shows longitudinal waves. (స్లింకీ అనుదైర్ఘ్య తరంగాలను చూపుతుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>31. Crest (శిఖరం):</strong> Peak of a wave graph.<br><em>Ex: Crest represents maximum compression. (శిఖరం గరిష్ట సంపీడనాన్ని సూచిస్తుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>32. Trough (ద్రోణి):</strong> Valley of a wave graph.<br><em>Ex: Trough represents maximum rarefaction. (ద్రోణి గరిష్ట విరళనాన్ని సూచిస్తుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>33. Supersonic (సూపర్‌సోనిక్):</strong> Speeds exceeding sound speed.<br><em>Ex: Fighter jets fly at supersonic speeds. (ఫైటర్ జెట్‌లు సూపర్‌సోనిక్ వేగంతో ప్రయాణిస్తాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>34. Acoustics (ధ్వని శాస్త్రము):</strong> Branch of physics studying sound.<br><em>Ex: Auditorium design relies on acoustics. (ఆడిటోరియం నిర్మాణం అకౌస్టిక్స్ పై ఆధారపడి ఉంటుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>35. Noise (గోల / శబ్దం):</strong> Unpleasant irregular sound.<br><em>Ex: Heavy traffic creates unwanted noise. (ట్రాఫిక్ అవాంఛిత శబ్దాన్ని సృష్టిస్తుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>36. Musical Note (సంగీత స్వరం):</strong> Pleasant regular sound note.<br><em>Ex: Flutes produce sweet musical notes. (ఫ్లూట్ మధురమైన సంగీత స్వరాలను ఇస్తుంది.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>37. Receiver (గ్రాహకము):</strong> Device detecting received waves.<br><em>Ex: SONAR receivers catch reflected pulses. (SONAR గ్రాహకాలు పరావర్తన పల్స్‌లను అందుకుంటాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>38. Transmitter (ప్రసారకము):</strong> Device sending out waves.<br><em>Ex: Transmitters emit ultrasound in water. (ప్రసారకాలు నీటిలో అతీధ్వనులను పంపుతాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>39. Obstacle (అడ్డంకి):</strong> Barrier reflecting sound waves.<br><em>Ex: Walls act as obstacles for echoes. (గోడలు ప్రతిధ్వనులకు అడ్డంకులుగా నిలుస్తాయి.)</em></div>
+                <div class="p-3 bg-slate-50 rounded border"><strong>40. Foetus (పిండము):</strong> Developing unborn offspring.<br><em>Ex: Ultrasound monitors foetus growth safely. (అల్ట్రాసౌండ్ పిండం ఎదుగుదలను సురక్షితంగా పర్యవేక్షిస్తుంది.)</em></div>
+            </div>
+        </section>
+
+        <!-- EXERCISES & Q&A SECTION -->
+        <section id="exercises" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-100 space-y-8">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">Textbook Exercises & Q&A (అభ్యాసాలు మరియు ప్రశ్న-జవాబులు)</h2>
+
+            <!-- Reflections on Concepts -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-blue-700 border-b pb-2">I. Reflections on Concepts (అవగాహన - ప్రతిబింబాలు)</h3>
+                
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">1. Explain the following terms: (a) amplitude, (b) wavelength, (c) frequency. (AS1)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> క్రింది పదాలను వివరించండి: (a) కంపన పరిమితి, (b) తరంగదైర్ఘ్యం, (c) పౌనఃపున్యం.</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> (a) Amplitude is the maximum disturbance of particles from their mean position. (b) Wavelength is the distance between two consecutive compressions or rarefactions. (c) Frequency is the number of oscillations completed per unit time.<br><strong>తెలుగు వివరణ:</strong> (a) కంపన పరిమితి అనగా కణం పొందే గరిష్ట విచలనం. (b) తరంగదైర్ఘ్యం అనగా రెండు వరుస సంపీడనాల మధ్య దూరం. (c) పౌనఃపున్యం అనగా ప్రమాణ కాలంలో జరిగే డోలనాల సంఖ్య.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">2. Write the relation between wavelength, frequency and speed of sound. (AS1)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> తరంగదైర్ఘ్యం, పౌనఃపున్యం మరియు ధ్వని వేగం మధ్య సంబంధాన్ని రాయండి.</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> Speed of sound (v) = Frequency (nu) × Wavelength (lambda), i.e., v = nu * lambda.<br><strong>తెలుగు వివరణ:</strong> ధ్వని వేగం (v) = పౌనఃపున్యం (nu) × తరంగదైర్ఘ్యం (lambda), అనగా v = nu * lambda.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">3. Which has larger frequency – infrasonic sound or ultrasonic sound? (AS2)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> దానికి ఎక్కువ పౌనఃపున్యం ఉంటుంది - అవశ్రవ్య ధ్వనికా లేక అతీధ్వనికా?</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> Ultrasonic sound has a much larger frequency (greater than 20,000 Hz) compared to infrasonic sound (less than 20 Hz).<br><strong>తెలుగు వివరణ:</strong> అవశ్రవ్య ధ్వని (20 Hz కంటే తక్కువ) తో పోలిస్తే అతీధ్వనికి (20,000 Hz కంటే ఎక్కువ) చాలా ఎక్కువ పౌనఃపున్యం ఉంటుంది.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">4. What do you understand by a sound wave? (AS1)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> ధ్వని తరంగం అంటే ఏమిటి?</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> A sound wave is a longitudinal mechanical wave created by vibrating bodies that propagates through a medium via alternating compressions and rarefactions.<br><strong>తెలుగు వివరణ:</strong> కంపిస్తున్న వస్తువుల ద్వారా ఏర్పడి, యానకంలో సంపీడనాలు మరియు విరళనాల రూపంలో ప్రయాణించే అనుదైర్ఘ్య యాంత్రిక తరంగాన్ని ధ్వని తరంగం అంటారు.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">5. Why is soft furnishing avoided in concert halls? (AS7)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> సంగీత కచ్చేరీ హాల్‌లలో మృదువైన అలంకరణలను (కవర్లు/కుషన్లు) ఎందుకు పరిమితం చేస్తారు?</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> Excessive soft furnishings absorb too much sound, making the auditorium acoustically dead or dry. Proper acoustic design requires controlled absorption to prevent excessive reverberation without making the sound completely flat.<br><strong>తెలుగు వివరణ:</strong> మృదువైన వస్తువులు శబ్దాన్ని ఎక్కువగా పీల్చుకుంటాయి (శబ్ద శోషణ). దీనివల్ల హాల్‌లో శబ్దం చాలా మందగించి జీవనశైలి కోల్పోతుంది, కాబట్టి తగినంత శోషణ మాత్రమే ఉండాలి.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">6. Define the wavelength of a sound wave. How is it related to the frequency and the wave speed? (AS1)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> ధ్వని తరంగదైర్ఘ్యాన్ని నిర్వచించండి. ఇది పౌనఃపున్యం మరియు తరంగ వేగంతో ఎలా సంబంధం కలిగి ఉంటుంది?</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> Wavelength is the distance between two consecutive compressions or rarefactions. It is related as Wavelength (lambda) = Speed (v) / Frequency (nu).<br><strong>తెలుగు వివరణ:</strong> రెండు వరుస సంపీడనాలు లేదా విరళనాల మధ్య దూరాన్ని తరంగదైర్ఘ్యం అంటారు. ఇది తరంగ వేగం మరియు పౌనఃపున్యాల నిష్పత్తికి సమానం (lambda = v / nu).</p>
+                </div>
+            </div>
+
+            <!-- Application of Concepts -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-blue-700 border-b pb-2">II. Application of Concepts (అవుసరాల అన్వయం)</h3>
+                
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">1. Does sound follow the same laws of reflection as light does? (AS1)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> కాంతి పాటించే పరావర్తన నియమాలనే ధ్వని కూడాపాటిస్తుందా?</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> Yes, sound follows the same laws of reflection: (i) The angle of incidence equals the angle of reflection. (ii) The incident sound wave, the reflected sound wave, and the normal all lie in the same plane.<br><strong>తెలుగు వివరణ:</strong> అవును, ధ్వని కూడా కాంతి లాగే పరావర్తన నియమాలను పాటిస్తుంది: పతన కోణం పరావర్తన కోణానికి సమానం మరియు పతన తరంగం, పరావర్తన తరంగం, లంబం అన్నీ ఒకే తలంలో ఉంటాయి.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">2. Two sources A and B vibrate with the same amplitude. They produce sounds of frequencies 1 kHz and 30 kHz respectively. Which of the two waves will have larger power? (AS1)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> A మరియు B వనరులు సమాన కంపన పరిమితితో కంపిస్తున్నాయి. వాటి పౌనఃపున్యాలు వరుసగా 1 kHz మరియు 30 kHz. ఏ తరంగానికి ఎక్కువ శక్తి ఉంటుంది?</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> Wave B (30 kHz) will have larger power/energy because the energy carried by a wave is directly proportional to the square of its frequency for the same amplitude.<br><strong>తెలుగు వివరణ:</strong> B తరంగానికి (30 kHz) ఎక్కువ శక్తి ఉంటుంది, ఎందుకంటే సమాన కంపన పరిమితి ఉన్నప్పుడు తరంగ శక్తి దాని పౌనఃపున్య వర్గానికి అనులోమానుపాతంలో ఉంటుంది.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">3. You might have observed that sometimes your pet dog starts barking though no one is seen around. Does this observation raise any doubts about the peculiar behavior of dogs after your understanding of the range of hearing? (AS2)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> ఎవరూ లేకపోయినా పెంపుడు కుక్క ఒక్కసారిగా అరవడం గమనించారా? శ్రవణావధిని బట్టి కుక్కల ఈ ప్రవర్తన మీకు ఏమనిపిస్తుంది?</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> Yes. Dogs can hear sounds of frequencies up to 50 kHz (ultrasound) which are inaudible to humans. They bark because they detect faint high-frequency sounds or distant vibrations that humans cannot perceive.<br><strong>తెలుగు వివరణ:</strong> కుక్కలు 50 kHz వరకు ఉన్న అతీధ్వనులను వినగలవు. మానవులకు వినిపించని సూక్ష్మ శబ్దాలను లేదా దూరపు ప్రకంపనలను అవి గ్రహించి అలా అరుస్తాయి.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">4. With the help of a diagram describe how compression and rarefaction pulses are produced in air near a source of sound. (AS5)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> పట సహాయంతో ధ్వని వనరు దగ్గర గాలిలో సంపీడనాలు మరియు విరళనాలు ఎలా ఏర్పడతాయో వివరించండి.</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> When a membrane moves forward, it pushes air layers together forming high-pressure compressions. When it moves backward, it creates low-pressure regions called rarefactions. (Refer to Fig-3 in textbook).<br><strong>తెలుగు వివరణ:</strong> పొర ముందుకు కదిలినప్పుడు గాలి అణువులు దగ్గరగా వచ్చి సంపీడనం ఏర్పడుతుంది. వెనక్కి కదిలినప్పుడు గాలి పీడనం తగ్గి విరళనం ఏర్పడుతుంది.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">5. How are multiple reflections of sound helpful to doctors and engineers? (AS7)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> ధ్వని బహుళ పరావర్తనాలు డాక్టర్లకు మరియు ఇంజనీర్లకు ఎలా ఉపయోగపడతాయి?</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> Doctors use stethoscopes (based on multiple reflections) to hear heartbeats. Engineers design megaphones, horns, and concert hall acoustics using multiple reflections to direct sound effectively.<br><strong>తెలుగు వివరణ:</strong> డాక్టర్లు గుండె చప్పుళ్ళు వినడానికి స్టెతస్కోప్‌లలో, ఇంజనీర్లు మెగాఫోన్‌లు మరియు ఆడిటోరియంల నిర్మాణంలో శబ్దాన్ని సరిగ్గా ప్రసరింపజేయడానికి బహుళ పరావర్తనాన్ని వాడతారు.</p>
+                </div>
+            </div>
+
+            <!-- Higher Order Thinking Questions -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-blue-700 border-b pb-2">III. Higher Order Thinking Questions (ఉన్నత స్థాయి ఆలోచనా ప్రశ్నలు)</h3>
+                
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">1. Explain the working and applications of SONAR. (AS1)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> SONAR పనితీరు మరియు అనువర్తనాలను వివరించండి.</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> SONAR sends ultrasonic waves into water from a transmitter, which reflect off underwater objects and return to the receiver. By measuring time (t) and speed (u), distance is found as d = (u * t) / 2. Applications include mapping ocean floors and locating submarines.<br><strong>తెలుగు వివరణ:</strong> SONAR ప్రసారకం ద్వారా నీటిలోకి అతీధ్వనులను పంపి, వస్తువులపై పరావర్తనం చెంది వచ్చే ప్రతిధ్వని కాలం ఆధారంగా దూరాన్ని d = (u * t) / 2 సూత్రంతో లెక్కిస్తుంది. దీనిని సముద్ర లోతును కనుగొనడానికి వాడతారు.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">2. How do you appreciate efforts of a musician to produce melodious sound using a musical instrument by simultaneously controlling frequency and amplitude? (AS6)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> పౌనఃపున్యం మరియు కంపన పరిమితిని నియంత్రిస్తూ సంగీత వాయిద్యం ద్వారా మధురమైన ధ్వనిని సృష్టించే సంగీతకారుడి కృషిని ఎలా అభినందిస్తారు?</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> Musicians masterfully tune string or wind instruments by altering frequency (pitch) and force (amplitude/loudness) to create pleasing harmony, demonstrating a deep practical application of wave physics.<br><strong>తెలుగు వివరణ:</strong> సంగీతకారులు శృతి (frequency) మరియు బిగ్గరతను (amplitude) సమన్వయం చేస్తూ శ్రావ్యమైన సంగీతాన్ని సృష్టించడం భౌతిక శాస్త్ర సూత్రాల యొక్క అద్భుతమైన ఆచరణాత్మక రూపం.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">3. How do echoes in a normal room affect the quality of the sounds that we hear? (AS7)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> సాధారణ గదిలో ఏర్పడే ప్రతిధ్వనులు మనం వినే శబ్ద నాణ్యతను ఎలా ప్రభావితం చేస్తాయి?</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Answer:</strong> In a normal furnished room, reflections are absorbed by walls and furniture, preventing harsh echoes. In an empty room, multiple quick reflections cause reverberation, making speech unclear and blurred.<br><strong>తెలుగు వివరణ:</strong> సాధారణ గదిలో వస్తువులు శబ్దాన్ని పీల్చుకుంటాయి. కానీ ఖాళీ గదిలో బహుళ పరావర్తనాలు జరిగి శబ్దం స్పష్టత కోల్పోయి గందరగోళంగా మారుతుంది.</p>
+                </div>
+            </div>
+
+            <!-- Multiple Choice Questions -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-blue-700 border-b pb-2">IV. Multiple Choice Questions (బహుళైచ్ఛిక ప్రశ్నలు)</h3>
+                
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2 text-sm">
+                    <p><strong>1. When can you say that the sound is propagating through a medium:</strong> [ d ]<br>a) If the medium is travelling &nbsp; b) The particles of a medium are travelling &nbsp; c) When the source of sound is travelling &nbsp; d) When the disturbance is travelling.</p>
+                    <p><strong>2. The unit for the number of waves produced in a second are:</strong> [ a ]<br>a) Hertz &nbsp; b) Joule &nbsp; c) Meter &nbsp; d) Pascal.</p>
+                    <p><strong>3. The sounds of frequency less than 20 Hz are known as:</strong> [ d ]<br>a) Ultra sounds &nbsp; b) Soft sounds &nbsp; c) Louder sounds &nbsp; d) Infrasonics.</p>
+                    <p><strong>4. The sound limit between the frequency of 20Hz – 20000Hz is called as:</strong> [ a ]<br>a) Audible range &nbsp; b) Ultra sound range &nbsp; c) Low sound range &nbsp; d) Sonic boom.</p>
+                    <p><strong>5. The characteristic feature of sound which conveys the sensation of sound to our brain is:</strong> [ a ]<br>a) Pitch &nbsp; b) Loudness &nbsp; c) Quality &nbsp; d) Amplitude.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUGGESTED EXPERIMENTS & PROJECTS SECTION -->
+        <section id="exp-projects" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-100 space-y-8">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">Suggested Experiments & Projects (సూచించిన ప్రయోగాలు మరియు ప్రాజెక్టులు)</h2>
+
+            <!-- Suggested Experiments -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-blue-700 border-b pb-2">Suggested Experiments (సూచించిన ప్రయోగాలు)</h3>
+                
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">1. Conduct an experiment to listen to the reflected sound and write a report. (AS3)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> పరావర్తనం చెందిన ధ్వనిని వినడానికి ప్రయోగం నిర్వహించి నివేదిక రాయండి.</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Procedure:</strong> Use two identical tubes placed at equal angles on a table near a wall. Speak softly into one tube and listen through the other to verify the laws of reflection.<br><strong>తెలుగు వివరణ:</strong> గోడ ముందు రెండు సమాన గొట్టాలను ఉంచి, ఒక వైపు నుండి మాట్లాడి మరో వైపు నుండి వింటూ పరావర్తన నియమాలను నిరూపించాలి.</p>
+                </div>
+            </div>
+
+            <!-- Suggested Projects -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-blue-700 border-b pb-2">Suggested Projects (సూచించిన ప్రాజెక్టులు)</h3>
+                
+                <div class="p-4 bg-slate-50 rounded-lg border space-y-2">
+                    <p class="font-bold text-slate-900">1. Collect information about animals which communicate through infrasonics or ultrasonics. Collect their pictures and write a report. (AS4)</p>
+                    <p class="text-sm text-slate-600"><strong>తెలుగు:</strong> అవశ్రవ్యాలు లేదా అతీధ్వనుల ద్వారా సంభాషించే జంతువుల సమాచారాన్ని సేకరించి నివేదిక రాయండి.</p>
+                    <p class="text-sm bg-blue-50 p-3 rounded"><strong>Project Details:</strong> Gather information on bats, whales, elephants, and dolphins regarding their communication frequencies and behavior.<br><strong>తెలుగు వివరణ:</strong> గబ్బిలాలు, తిమింగలాలు, ఏనుగులు మరియు డాల్ఫిన్లు ఉపయోగించే ధ్వని పౌనఃపున్యాలు మరియు వాటి సంభాషణ విధానాలపై నివేదిక తయారుచేయాలి.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition z-40">
+        ↑ Top
+    </button>
+
+    <!-- SCRIPT FOR TRACKING & TIMER -->
+    <script>
+        let startTime = Date.now();
+        let timerInterval;
+
+        document.getElementById('visitorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('visitorName').value;
+            const roll = document.getElementById('visitorRoll').value;
+            if(name && roll) {
+                document.getElementById('visitorModal').style.display = 'none';
+                startTimer();
+            }
+        });
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                let elapsed = Math.floor((Date.now() - startTime) / 1000);
+                let mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+                let secs = String(elapsed % 60).padStart(2, '0');
+                document.getElementById('sessionTimer').innerText = `Time Spent: ${mins}:${secs}`;
+            }, 1000);
+        }
+
+        function sendReport() {
+            const name = document.getElementById('visitorName').value || "Unknown Student";
+            const roll = document.getElementById('visitorRoll').value || "N/A";
+            const elapsed = Math.floor((Date.now() - startTime) / 1000);
+            const subject = encodeURIComponent("Study Report - Sound Chapter");
+            const body = encodeURIComponent(`Student Name: ${name}\nRoll Number: ${roll}\nTotal Study Time: ${elapsed} seconds.`);
+            window.location.href = `mailto:balaswamysm@gmail.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+</html>
